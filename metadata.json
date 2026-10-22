@@ -1,0 +1,6 @@
+{
+  "name": "Gear Fight",
+  "description": "An action-strategy steampunk battler. Assemble interlocking gear networks to deploy armies of swordsmen, archers, and siege brutes against rival mechanical war machines.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

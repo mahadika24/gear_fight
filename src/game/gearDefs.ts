@@ -1,0 +1,171 @@
+import { GearDef, GearRole, BuffUpgrade } from './types';
+
+export const GEAR_DEFINITIONS: Record<GearRole, GearDef> = {
+  BERSERKER: {
+    role: 'BERSERKER',
+    name: 'Redbeard Berserker',
+    baseCost: 12,
+    teeth: 10,
+    color: '#3B82F6',
+    borderColor: '#1D4ED8',
+    accentColor: '#EF4444',
+    description: 'Fierce red-bearded warrior with dual blades that cleaves advancing enemy ranks.',
+    type: 'character',
+    power: 12,
+    hp: 160,
+    dmg: 28,
+    attackSpeed: 1.2,
+    trait: 'Cleaving melee strike + 15% frenzy rage on hit.'
+  },
+  ROGUE: {
+    role: 'ROGUE',
+    name: 'Swiftblade Scout',
+    baseCost: 11,
+    teeth: 10,
+    color: '#22C55E',
+    borderColor: '#15803D',
+    accentColor: '#F59E0B',
+    description: 'Agile fighter with twin daggers and throwing knives for high single-target burst.',
+    type: 'character',
+    power: 11,
+    hp: 110,
+    dmg: 24,
+    attackSpeed: 1.6,
+    trait: 'High critical strike chance and fast movement speed.'
+  },
+  GOLD_COG: {
+    role: 'GOLD_COG',
+    name: 'Overdrive Cog',
+    baseCost: 10,
+    teeth: 12,
+    color: '#EAB308',
+    borderColor: '#CA8A04',
+    accentColor: '#FEF08A',
+    description: 'Kinetic booster gear that amplifies connected gears and grants +Nuts every round.',
+    type: 'utility',
+    power: 1,
+    hp: 0,
+    dmg: 0,
+    attackSpeed: 0,
+    trait: '+30% speed to touching gears & produces +3 Nuts per wave.'
+  },
+  HAMMER: {
+    role: 'HAMMER',
+    name: 'Warhammer Dynamo',
+    baseCost: 10,
+    teeth: 10,
+    color: '#334155',
+    borderColor: '#1E293B',
+    accentColor: '#E2E8F0',
+    description: 'Heavy warhammer that slams downward every revolution, releasing shockwaves.',
+    type: 'weapon',
+    power: 10,
+    hp: 0,
+    dmg: 45,
+    attackSpeed: 0.9,
+    trait: 'Slams ground on each revolution, dealing area damage & stun.'
+  },
+  ARCHER: {
+    role: 'ARCHER',
+    name: 'Sharpshooter Cog',
+    baseCost: 11,
+    teeth: 10,
+    color: '#06B6D4',
+    borderColor: '#0891B2',
+    accentColor: '#67E8F9',
+    description: 'Ranged sniper that unleashes piercing bolts from distance.',
+    type: 'character',
+    power: 11,
+    hp: 90,
+    dmg: 22,
+    attackSpeed: 1.3,
+    trait: 'Long-range attacks that strike enemy backlines.'
+  },
+  KNIGHT: {
+    role: 'KNIGHT',
+    name: 'Ironclad Sentinel',
+    baseCost: 13,
+    teeth: 12,
+    color: '#6366F1',
+    borderColor: '#4338CA',
+    accentColor: '#C7D2FE',
+    description: 'Heavy tower shield tank that absorbs incoming damage for the front line.',
+    type: 'character',
+    power: 13,
+    hp: 340,
+    dmg: 18,
+    attackSpeed: 0.8,
+    trait: 'Absorbs 30% of incoming damage.'
+  },
+  TESLA: {
+    role: 'TESLA',
+    name: 'Arc Sparker',
+    baseCost: 14,
+    teeth: 10,
+    color: '#EC4899',
+    borderColor: '#BE185D',
+    accentColor: '#F472B6',
+    description: 'Electric discharge coil that arcs chain lightning between enemies.',
+    type: 'weapon',
+    power: 14,
+    hp: 0,
+    dmg: 32,
+    attackSpeed: 1.1,
+    trait: 'Arcs electric lightning to 3 adjacent enemies.'
+  },
+  BOMB: {
+    role: 'BOMB',
+    name: 'Demolition Cog',
+    baseCost: 12,
+    teeth: 10,
+    color: '#F97316',
+    borderColor: '#C2410C',
+    accentColor: '#FDBA74',
+    description: 'Launches explosive incendiary canisters across the battle line.',
+    type: 'weapon',
+    power: 12,
+    hp: 0,
+    dmg: 50,
+    attackSpeed: 0.7,
+    trait: 'Large area explosion dealing fire damage.'
+  }
+};
+
+export const INITIAL_BUFFS: BuffUpgrade[] = [
+  {
+    id: 'warrior_dmg',
+    name: 'Troop Attack Power',
+    desc: '+15% damage for all deployed warriors',
+    costGems: 20,
+    level: 0,
+    maxLevel: 5,
+    icon: 'Sword'
+  },
+  {
+    id: 'motor_rpm',
+    name: 'Drive Motor RPM',
+    desc: '+12% base rotation speed for all gears',
+    costGems: 25,
+    level: 0,
+    maxLevel: 5,
+    icon: 'Zap'
+  },
+  {
+    id: 'nut_income',
+    name: 'Scrap Scavenger',
+    desc: '+3 bonus Nuts awarded after every wave',
+    costGems: 30,
+    level: 0,
+    maxLevel: 5,
+    icon: 'Coins'
+  },
+  {
+    id: 'base_hearts',
+    name: 'Fortress Reinforcement',
+    desc: '+3 Maximum Hearts (Lives)',
+    costGems: 35,
+    level: 0,
+    maxLevel: 3,
+    icon: 'Heart'
+  }
+];
